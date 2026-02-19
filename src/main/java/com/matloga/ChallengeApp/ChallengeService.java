@@ -11,6 +11,8 @@ public class ChallengeService {
 
     private Long nextId = 1L;
 
+    ChallengeRepository ChallengeRepository;
+
     public ChallengeService(){
     }
 
@@ -21,7 +23,7 @@ public class ChallengeService {
     public boolean addChallenge(Challenge challenge) {
         if (challenge != null) {
             challenge.setId(nextId++);
-            challenges.add(challenge);
+            challengeRepository.save(challenge);
             return true;
         }else {
             return false;
