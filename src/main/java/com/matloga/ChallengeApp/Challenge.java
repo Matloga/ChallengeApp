@@ -1,6 +1,11 @@
 package com.matloga.ChallengeApp;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Challenge {
+    @Id
     private Long id;
     private String month;
     private String description;
